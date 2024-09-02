@@ -1,7 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
-import Error from './components/Error.jsx'
+import Error from './routes/Error.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
