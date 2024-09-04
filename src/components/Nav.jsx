@@ -1,13 +1,29 @@
-import {Link} from 'react-router-dom'
+import {Link, NavLink} from 'react-router-dom'
+
+import React, {useState} from 'react';
+
 const Nav=()=>{
+    const [menuOpen, setMenuOpen] = useState(false)
+    
+    
+    
     return(
         <>
     <nav>
-      <ul>
-        <li><Link to='/'>Home</Link></li>
-        <li><Link to='/Produtos'>Produtos</Link></li>
-        <li><Link to='Contato'>Contato</Link></li>
-        <li><Link to='/Sobre'>Sobre</Link></li>
+        <li><Link to='/' className='title'>
+        Home</Link></li>
+        <div className='menu' onClick={() => {
+            setMenuOpen(!menuOpen)
+        }}>
+        <span></span>
+        <span></span>
+        <span></span>
+
+        </div>
+        <ul className={menuOpen ? "open" : ""}>
+        <li><NavLink to='/Produtos' className="produtos">Produtos</NavLink></li>
+        <li><NavLink to='Contato'>Contato</NavLink></li>
+        <li><NavLink to='/Sobre'>Sobre</NavLink></li>
        </ul>
     </nav>
         </>
