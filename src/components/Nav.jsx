@@ -1,6 +1,8 @@
 import {Link, NavLink} from 'react-router-dom'
 
 import React, {useState} from 'react';
+import "../css/NavStyle.css"
+import "../css/AppStyle.css"
 
 const Nav=()=>{
     const [menuOpen, setMenuOpen] = useState(false)
